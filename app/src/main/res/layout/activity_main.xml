@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="good"
+            type="cn.mycommons.goodsdemo.GoodsItem" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="cn.mycommons.goodsdemo.MainActivity">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                tools:showIn="@layout/activity_main">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="可口可乐" />
+
+                <TextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    tools:text="x1" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    tools:text="￥100" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+
+            app:cardElevation="2dp">
+
+            <include
+                android:id="@+id/includeDatabinding"
+                layout="@layout/databinding" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp">
+
+            <include
+                android:id="@+id/includeDatabindingWithParam"
+                layout="@layout/databinding_with_param" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp">
+
+            <cn.mycommons.goodsdemo.GoodsItemView
+                android:id="@+id/goodsItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+
+            app:cardElevation="2dp">
+
+            <include
+                android:id="@+id/includeModule"
+                layout="@layout/databinding" />
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp">
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</layout>
