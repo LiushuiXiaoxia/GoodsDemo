@@ -24,9 +24,6 @@ public class GoodsItemFragment extends Fragment {
         return fragment;
     }
 
-
-    private TextView tvName, tvCount, tvPrice;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -39,9 +36,9 @@ public class GoodsItemFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        tvName = (TextView) view.findViewById(R.id.tvName);
-        tvCount = (TextView) view.findViewById(R.id.tvCount);
-        tvPrice = (TextView) view.findViewById(R.id.tvPrice);
+       TextView tvName = (TextView) view.findViewById(R.id.tvName);
+       TextView tvCount = (TextView) view.findViewById(R.id.tvCount);
+       TextView tvPrice = (TextView) view.findViewById(R.id.tvPrice);
 
         GoodsItem goodsItem = (GoodsItem) getArguments().getSerializable(EXTRA_GOODS_ITEM);
         if (goodsItem != null) {
